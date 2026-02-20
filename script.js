@@ -210,10 +210,24 @@ const translations = {
 };
 
 const LANG_STORAGE_KEY = "af_lang";
+const DEFAULT_LANG = "en";
+
+const detectSystemLanguage = () => {
+  const browserLangs = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language];
+
+  const hasRussian = browserLangs
+    .filter(Boolean)
+    .some((lang) => lang.toLowerCase().startsWith("ru"));
+
+  return hasRussian ? "ru" : DEFAULT_LANG;
+};
 
 const applyLanguage = (lang) => {
-  const pack = translations[lang] || translations.ru;
-  document.documentElement.lang = lang;
+  const normalizedLang = translations[lang] ? lang : DEFAULT_LANG;
+  const pack = translations[normalizedLang];
+  document.documentElement.lang = normalizedLang;
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
@@ -244,7 +258,7 @@ const applyLanguage = (lang) => {
   });
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
-    const isActive = btn.dataset.lang === lang;
+    const isActive = btn.dataset.lang === normalizedLang;
     btn.classList.toggle("is-active", isActive);
     btn.setAttribute("aria-pressed", isActive ? "true" : "false");
   });
@@ -252,7 +266,8 @@ const applyLanguage = (lang) => {
 
 const initLanguage = () => {
   const storedLang = localStorage.getItem(LANG_STORAGE_KEY);
-  const initialLang = storedLang && translations[storedLang] ? storedLang : "ru";
+  const detectedLang = detectSystemLanguage();
+  const initialLang = storedLang && translations[storedLang] ? storedLang : detectedLang;
 
   applyLanguage(initialLang);
 
