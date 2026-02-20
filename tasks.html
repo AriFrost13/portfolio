@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-title="title.tasks">Ari Frost | Worked Tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="starfield" class="star-canvas" aria-hidden="true"></canvas>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="lang-switch" role="group" aria-label="Language switcher">
+    <button class="lang-btn" type="button" data-lang="ru">RU</button>
+    <button class="lang-btn" type="button" data-lang="en">EN</button>
+  </div>
+
+  <main class="tasks-page">
+    <section class="hero reveal">
+      <a class="btn btn-ghost back-btn" href="index.html" data-i18n="tasks.back">Назад</a>
+      <p class="kicker" data-i18n="tasks.kicker">Worked Tasks / Details</p>
+      <h1 data-i18n="tasks.h1">С какими задачами работали</h1>
+      <p class="subtitle" data-i18n="tasks.subtitle">Подробно по направлениям: что делала, как выполняла и какой результат получали.</p>
+    </section>
+
+    <section id="parser" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="tasks.parser.label">Направление</p>
+        <h2 data-i18n="tasks.parser.title">Парсер и сбор данных</h2>
+      </div>
+      <div class="task-list">
+        <p data-i18n="tasks.parser.item1">Сбор данных и медиафайлов с сайта.</p>
+        <p data-i18n="tasks.parser.item2">Нормализация данных для дальнейшей работы.</p>
+        <p data-i18n="tasks.parser.item3">Экспорт в CSV, Excel и JSON для удобной передачи.</p>
+        <p data-i18n="tasks.parser.item4">Подготовка кратких отчетов по собранной информации.</p>
+      </div>
+    </section>
+
+    <section id="automation" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="tasks.automation.label">Направление</p>
+        <h2 data-i18n="tasks.automation.title">Автоматизация процессов</h2>
+      </div>
+      <div class="task-list">
+        <p data-i18n="tasks.automation.item1">Автоматизация повторяемых действий в рабочих процессах.</p>
+        <p data-i18n="tasks.automation.item2">Скрипты для сортировки, фильтрации и группировки данных.</p>
+        <p data-i18n="tasks.automation.item3">Формирование отчетов по расписанию или по запросу.</p>
+        <p data-i18n="tasks.automation.item4">Ускорение рутинных операций и снижение ручных ошибок.</p>
+      </div>
+    </section>
+
+    <section id="telegram" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="tasks.telegram.label">Направление</p>
+        <h2 data-i18n="tasks.telegram.title">Telegram и боты</h2>
+      </div>
+      <div class="task-list">
+        <p data-i18n="tasks.telegram.item1">Настройка Telegram-ботов под рабочие и контентные задачи.</p>
+        <p data-i18n="tasks.telegram.item2">Автоматизация публикаций и расписаний в пабликах.</p>
+        <p data-i18n="tasks.telegram.item4">Поддержка стабильной работы ботов и сценариев.</p>
+      </div>
+    </section>
+
+    <section id="visual" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="tasks.visual.label">Направление</p>
+        <h2 data-i18n="tasks.visual.title">Визуал и контент</h2>
+      </div>
+      <div class="task-list">
+        <p data-i18n="tasks.visual.item1">Подготовка визуальных материалов для контента и личного бренда.</p>
+        <p data-i18n="tasks.visual.item2">Работа с Photoshop и видеоредактором под конкретную задачу.</p>
+        <p data-i18n="tasks.visual.item3">Оформление в едином стиле: аккуратная структура и понятная подача.</p>
+        <p data-i18n="tasks.visual.item4">Актуально изучаю дизайн с нейросетями и внедряю в практику.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

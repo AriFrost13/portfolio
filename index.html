@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-title="title.home">Ari Frost | Freelancer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <canvas id="starfield" class="star-canvas" aria-hidden="true"></canvas>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="lang-switch" role="group" aria-label="Language switcher">
+    <button class="lang-btn" type="button" data-lang="ru">RU</button>
+    <button class="lang-btn" type="button" data-lang="en">EN</button>
+  </div>
+
+  <main id="home">
+    <section class="hero reveal">
+      <p class="kicker" data-i18n="home.kicker">Freelancer // Automation // Design</p>
+      <h1>Ari Frost</h1>
+      <p class="subtitle" data-i18n-html="home.subtitle_html">
+        Я фрилансер, беру разные задачи и довожу их до результата. Основной фокус:
+        <strong>Python</strong> и <strong>автоматизация</strong>.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact" data-i18n="home.cta_contact">Обсудить задачу</a>
+        <a class="btn btn-ghost" href="tasks.html" data-i18n="home.cta_tasks">С какими задачами работали</a>
+      </div>
+    </section>
+
+    <section id="about" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="about.label">Позиционирование</p>
+        <h2 data-i18n="about.title">Кто такая Ari Frost</h2>
+      </div>
+      <div class="line-list">
+        <p data-i18n="about.line1">Фрилансер, который может включиться в разные форматы задач: код, контент, визуал.</p>
+        <p data-i18n="about.line2">Сильная техническая база + креативный бэкграунд.</p>
+        <p data-i18n="about.line3">Спокойная коммуникация и аккуратный стиль исполнения.</p>
+        <p data-i18n="about.line4">Опыт пока небольшой, поэтому и стоимость задач соответствует.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="skills.label">Навыки</p>
+        <h2 data-i18n="skills.title">Что делаю лучше всего</h2>
+      </div>
+
+      <article class="skill-row">
+        <span>01</span>
+        <div>
+          <h3 data-i18n="skills.item1.title">Python и автоматизация</h3>
+          <p data-i18n="skills.item1.text">Скрипты, рабочие процессы, парсеры, удобный сбор информации и сортировка данных для ускорения рутинных задач.</p>
+        </div>
+      </article>
+
+      <article class="skill-row">
+        <span>02</span>
+        <div>
+          <h3 data-i18n="skills.item2.title">Дизайн и визуал</h3>
+          <p data-i18n="skills.item2.text">Опыт в Photoshop, видеоредакторе, создании и разработке дизайна под задачу. На текущий момент также изучаю дизайн с нейросетями.</p>
+        </div>
+      </article>
+
+      <article class="skill-row">
+        <span>03</span>
+        <div>
+          <h3 data-i18n="skills.item3.title">Гибкий формат работы</h3>
+          <p data-i18n="skills.item3.text">Могу взять нестандартную задачу, быстро погрузиться и предложить рабочее решение.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="story" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="story.label">Опыт</p>
+        <h2 data-i18n="story.title">Бэкграунд и медиа</h2>
+      </div>
+      <div class="story-grid">
+        <div>
+          <h3 data-i18n="story.card1.title">YouTube и Twitch</h3>
+          <p data-i18n="story.card1.text">Раньше вела YouTube-канал и Twitch-канал, поэтому понимаю подачу, аудиторию и визуальный ритм.</p>
+        </div>
+        <div>
+          <h3 data-i18n="story.card2.title">Комбинация IT + Content</h3>
+          <p data-i18n="story.card2.text">Соединяю техническое мышление, дизайн и контентный опыт в одном проекте. Также работала дизайнером одежды.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="home_cases.label">Кейсы</p>
+        <h2 data-i18n="home_cases.title">С какими задачами работали</h2>
+      </div>
+      <div class="case-gallery">
+        <a class="case-link" href="tasks.html#parser">
+          <article class="case-card">
+            <img src="assets/cases/parser.png" alt="Кейс: парсер и сбор данных" data-i18n-alt="home_cases.card1.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="home_cases.card1.title">Парсер и сбор данных</h3>
+              <p data-i18n="home_cases.card1.text">Сбор, очистка и сортировка данных по заданным параметрам.</p>
+            </div>
+          </article>
+        </a>
+        <a class="case-link" href="tasks.html#automation">
+          <article class="case-card">
+            <img src="assets/cases/automation.png" alt="Кейс: автоматизация процессов" data-i18n-alt="home_cases.card2.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="home_cases.card2.title">Автоматизация процессов</h3>
+              <p data-i18n="home_cases.card2.text">Скрипты для рутины, отчеты и повторяемые сценарии.</p>
+            </div>
+          </article>
+        </a>
+        <a class="case-link" href="tasks.html#telegram">
+          <article class="case-card">
+            <img src="assets/cases/telegram.png" alt="Кейс: Telegram и боты" data-i18n-alt="home_cases.card3.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="home_cases.card3.title">Telegram и боты</h3>
+              <p data-i18n="home_cases.card3.text">Автоматизация пабликов, публикаций и ботов.</p>
+            </div>
+          </article>
+        </a>
+        <a class="case-link" href="tasks.html#visual">
+          <article class="case-card">
+            <img src="assets/cases/visual.png" alt="Кейс: визуал и контент" data-i18n-alt="home_cases.card4.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="home_cases.card4.title">Визуал и контент</h3>
+              <p data-i18n="home_cases.card4.text">Оформление контента и визуальная подача проектов.</p>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="panel reveal contact-block">
+      <div class="section-head">
+        <p data-i18n="contact.label">Контакты</p>
+        <h2 data-i18n="contact.title">Готова к задачам</h2>
+      </div>
+      <div class="contact-layout">
+        <article class="contact-card">
+          <h3 data-i18n="contact.work.title">По задачам</h3>
+          <p data-i18n="contact.work.text">Лучше всего писать сразу в Telegram.</p>
+          <a class="btn btn-primary" href="https://t.me/Ari_Frost13" target="_blank" rel="noreferrer" data-i18n="contact.work.btn">Написать в Telegram</a>
+        </article>
+        <article class="contact-card">
+          <h3 data-i18n="contact.socials.title">Соцсети</h3>
+          <p data-i18n="contact.socials.text">Личные профили:</p>
+          <div class="socials-line">
+            <a class="social-link" href="https://x.com/AriFrost77867" target="_blank" rel="noreferrer">X</a>
+            <a class="social-link" href="https://www.instagram.com/ari_frost13/" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="social-link" href="https://tiktok.com/@ari_frost" target="_blank" rel="noreferrer">TikTok</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

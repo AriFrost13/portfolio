@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-title="title.cases">Ari Frost | Cases</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="starfield" class="star-canvas" aria-hidden="true"></canvas>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="lang-switch" role="group" aria-label="Language switcher">
+    <button class="lang-btn" type="button" data-lang="ru">RU</button>
+    <button class="lang-btn" type="button" data-lang="en">EN</button>
+  </div>
+
+  <main id="cases-home" class="cases-page">
+    <section class="hero reveal">
+      <a class="btn btn-ghost back-btn" href="index.html" data-i18n="cases.back">Назад</a>
+      <p class="kicker" data-i18n="cases.kicker">Portfolio / Cases</p>
+      <h1 data-i18n="cases.h1">Кейсы</h1>
+      <p class="subtitle" data-i18n="cases.subtitle">Примеры задач и форматов, с которыми я работаю: автоматизация, парсеры, Telegram и визуальный контент.</p>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <p data-i18n="cases.section.label">Примеры</p>
+        <h2 data-i18n="cases.section.title">Работы и направления</h2>
+      </div>
+      <div class="case-gallery">
+        <a class="case-link" href="tasks.html#parser">
+          <article class="case-card">
+            <img src="assets/cases/parser.png" alt="Пример кейса: парсер и сбор данных" data-i18n-alt="cases.card1.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="cases.card1.title">Парсер и сбор данных</h3>
+              <p data-i18n="cases.card1.text">Сбор информации из нескольких источников, очистка структуры и подготовка к дальнейшей обработке.</p>
+            </div>
+          </article>
+        </a>
+
+        <a class="case-link" href="tasks.html#automation">
+          <article class="case-card">
+            <img src="assets/cases/automation.png" alt="Пример кейса: автоматизация рабочих процессов" data-i18n-alt="cases.card2.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="cases.card2.title">Автоматизация процессов</h3>
+              <p data-i18n="cases.card2.text">Скрипты для ускорения рутинных задач: сортировка, фильтрация, отчеты и повторяемые действия.</p>
+            </div>
+          </article>
+        </a>
+
+        <a class="case-link" href="tasks.html#telegram">
+          <article class="case-card">
+            <img src="assets/cases/telegram.png" alt="Пример кейса: Telegram боты" data-i18n-alt="cases.card3.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="cases.card3.title">Telegram и боты</h3>
+              <p data-i18n="cases.card3.text">Настройка Telegram-ботов, автоматизация пабликов и рабочих публикаций.</p>
+            </div>
+          </article>
+        </a>
+
+        <a class="case-link" href="tasks.html#visual">
+          <article class="case-card">
+            <img src="assets/cases/visual.png" alt="Пример кейса: визуал и контент" data-i18n-alt="cases.card4.alt" loading="lazy" />
+            <div class="case-card-body">
+              <h3 data-i18n="cases.card4.title">Визуал и контент</h3>
+              <p data-i18n="cases.card4.text">Дизайн-оформление и подготовка визуальных материалов под личные и медийные проекты.</p>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+﻿# OS
+Thumbs.db
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+
+# Logs
+*.log
+
+# Env
+.env
+.env.*
